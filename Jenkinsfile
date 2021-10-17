@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    tool name: 'Docker', type: 'dockerTool'
     stages {
         stage('Sonar quality check') {
             agent{
