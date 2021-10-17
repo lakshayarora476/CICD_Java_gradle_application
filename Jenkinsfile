@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tool name: 'Docker', type: 'dockerTool'
     stages {
         stage('Sonar quality check') {
+            tool name: 'Docker', type: 'dockerTool'
             agent{
                 docker{
                     image 'openjdk:11'
